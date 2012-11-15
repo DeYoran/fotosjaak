@@ -7,7 +7,7 @@ if(isset($_POST['submit']))
 	if (loginclass::emailaddress_exists($_POST['username']))
 	{
 		/*meld dat emailadres bestaat*/
-		/*stuur terug naar */
+		/*stuur terug naar regisreergedeelte */
 		echo "there already has been made an account using this emailaddress,<br>
 			  please use another address.<br>
 			  you'll be send to the registrationpage";
@@ -15,8 +15,8 @@ if(isset($_POST['submit']))
 	else
 	{
 		/*schrijf gegevens naar database*/
+		loginclass::insert_into_logingegevens($_POST);
 		/*stuur email met activatielink*/
-		echo "false";
 	}
 }
 else
@@ -26,7 +26,7 @@ else
 	<table>
 		<tr>
 			<td>First name</td>
-			<td><input type='text' name = 'first name'></td>
+			<td><input type='text' name = 'firstname'></td>
 		</tr>
 		<tr>
 			<td>Insertion</td>
@@ -38,11 +38,11 @@ else
 		</tr>
 		<tr>
 			<td>address</td>
-			<td><input type='text' name = 'adress'></td>
+			<td><input type='text' name = 'address'></td>
 		</tr>
 		<tr>
 			<td>adress number</td>
-			<td><input type='text' name = 'adress number'></td>
+			<td><input type='text' name = 'addressnumber'></td>
 		</tr>
 		<tr>
 			<td>city</td>
@@ -67,10 +67,6 @@ else
 		<tr>
 			<td>email</td>
 			<td><input type='text' name = 'username'></td>
-		</tr>
-		<tr>
-			<td>password</td>
-			<td><input type='password' name = 'password'></td>
 		</tr>	
 		<tr>
 			<td></td>

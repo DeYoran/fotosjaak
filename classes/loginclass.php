@@ -54,5 +54,55 @@
 		//$var (bewering) ? "waar" : "niet waar"
 		return (mysql_num_rows($result) > 0) ? true : false;
 	}
+	
+	public static function insert_into_logingegevens($postarray)
+	{
+		global $database;
+		//genereer tijdelijk wachtwoord a.d.h. van emaildres en tijd
+		date_default_timezone_set("Europe/Amsterdam");
+		$date = date("Y:m:d h:i:s");
+		$temppassword = MD5($date.$postarray['username']);
+		$query = "insert into `logingegevens`  (`id`,
+												`username`,
+												`password`,
+												`userrole`,
+												`activated`,
+												`datetime`)
+										 Values(Null,
+												'".$postarray['username']."',
+												'".$temppassword."',
+												'customer',
+												'no',
+												'".$date."')";
+		$database->fire_query($query);
+		
+		//het opvragen van het zojuist gemaakte account
+		$query = "SELECT * FROM `logingegevens` WHERE `username` = '".$postarray['username']."'";
+		$id = array_shift(self::find_by_sql($query))->id;
+		$query = "INSERT INTO `user`(`id`, 
+									 `first name`,
+									 `insertion`,
+									 `surname`,
+									 `address`,
+									 `address number`,
+									 `city`,
+									 `zip code`,
+									 `country`,
+									 `phonenumber`,
+									 `cellnumber`)
+							 VALUES ('".$id."',
+									 '".$postarray['firstname']."',
+									 '".$postarray['insertion']."',
+									 '".$postarray['surname']."',
+									 '".$postarray['address']."',
+									 '".$postarray['addressnumber']."',
+									 '".$postarray['city']."',
+									 '".$postarray['zipcode']."',
+									 '".$postarray['country']."',
+									 '".$postarray['phonenumber']."',
+									 '".$postarray['cellnumber']."')";
+	$database->fire_query($query);
+	}
+	
  }
 ?>
