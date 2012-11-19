@@ -14,9 +14,9 @@ if(isset($_POST['submit']))
 	}
 	else
 	{
-		/*schrijf gegevens naar database*/
+		/*schrijf gegevens naar databasie en stuur activatielink*/
 		loginclass::insert_into_logingegevens($_POST);
-		/*stuur email met activatielink*/
+		echo("an activationmail has been send to your emailaddress");
 	}
 }
 else

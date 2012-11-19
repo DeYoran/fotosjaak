@@ -1,0 +1,13 @@
+<NotepadPlus>
+    <Session activeView="0">
+        <mainView activeIndex="5">
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="513" startPos="486" endPos="486" selMode="0" lang="PHP" encoding="-1" filename="C:\wamp\www\yorienl\blok2\index.php" />
+            <File firstVisibleLine="6" xOffset="0" scrollWidth="729" startPos="693" endPos="693" selMode="0" lang="PHP" encoding="-1" filename="C:\wamp\www\yorienl\blok2\register.php" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="414" startPos="0" endPos="0" selMode="0" lang="PHP" encoding="-1" filename="C:\wamp\www\yorienl\blok2\config\config.php" />
+            <File firstVisibleLine="119" xOffset="0" scrollWidth="2619" startPos="3677" endPos="3677" selMode="0" lang="PHP" encoding="-1" filename="C:\wamp\www\yorienl\blok2\classes\loginclass.php" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="972" startPos="84" endPos="84" selMode="0" lang="PHP" encoding="-1" filename="C:\wamp\www\yorienl\blok2\classes\MysqlDatabaseClass.php" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="882" startPos="433" endPos="433" selMode="0" lang="PHP" encoding="-1" filename="C:\wamp\www\yorienl\blok2\activatie.php" />
+        </mainView>
+        <subView activeIndex="0" />
+    </Session>
+</NotepadPlus>
