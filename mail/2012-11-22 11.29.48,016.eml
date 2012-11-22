@@ -1,0 +1,18 @@
+Date: Thu, 22 Nov 2012 11:29:48 +0100
+Subject: bevestiging registratie
+To: blablabl@blabla.com
+X-PHP-Originating-Script: 0:loginclass.php
+From: noreply@yorie.nl
+Reply_to: info@yorie.nl
+Cc: info@gmail.com@gmail.com
+X-mailer: PHP/5.4.3
+MIME-version: 1.0
+Content-type: text/html; charset=iso-8859-1
+
+geachte meneer/mevrouw <b>blabla bla blablabla</b><br><br>
+		u heeft een account aangemaakt op de website van fotosjaak <br>
+		voordat u deze kunt gebruiken, moet u deze eerst activeren, <br>
+		dit doet u door op de volgende link te klikken <br>
+		<a href='http://localhost/yorienl/blok2/activatie.php?em=blablabl@blabla.com&pw=7f7fa0b5c2f7e33b088315c5d793fde4'>activeer account</a><br>
+		<i>met vriendelijke groet<br>
+		Sjaak</i>

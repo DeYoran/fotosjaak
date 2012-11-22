@@ -144,5 +144,14 @@
 		$headers .= "Content-type: text/html; charset=iso-8859-1\r\n";
 		mail($ontvanger,$onderwerp,$bericht,$headers);
 	}
+	public static function update_password($email,$pass)
+	{
+		global $database;
+		$query = "UPDATE `logingegevens` 
+		SET `password` = '".$pass."',
+			`activated` = 'yes'
+		WHERE `username` = '".$email."'";
+		$database->fire_query($query);
+	}
  }
 ?>
